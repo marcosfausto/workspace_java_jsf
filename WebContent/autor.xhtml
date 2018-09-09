@@ -23,6 +23,12 @@
 				<h:panelGrid columns="2">
 					<h:outputLabel value="Nome:" for="nome" />
 					<h:inputText id="nome" value="#{autorBean.autor.nome}" />
+					
+					<h:outputLabel value="Email:" for="email" />
+					<h:inputText value="#{autorBean.autor.email}" id="email">
+   				    <f:passThroughAttribute name="type" value="email" />
+					</h:inputText>
+					
 					<h:commandButton value="Gravar" action="#{autorBean.gravar}" />
 				</h:panelGrid>
 			</fieldset>

@@ -19,6 +19,7 @@ public class Autor {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
+	private String email;
 	
 /*    @ManyToMany(mappedBy="autor")
 	private List<Livro> livros = new ArrayList<Livro>();
@@ -28,6 +29,14 @@ public class Autor {
 		return livros;
 	}*/
 	
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public List<Livro> getLivros() {
 		return new DAO<Livro>(Livro.class).listaTodos();
